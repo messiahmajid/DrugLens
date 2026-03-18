@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.9596362829895764,
+  "precision": 0.5928853754940712,
+  "recall": 0.6550218340611353,
+  "f1": 0.6224066390041494,
+  "auroc": 0.9353466922417664,
+  "auprc": 0.6292369748402258,
+  "confusion_matrix": [
+    [
+      4177,
+      103
+    ],
+    [
+      79,
+      150
+    ]
+  ],
+  "dataset_stats": {
+    "total_pairs": 30056,
+    "unique_drugs": 68,
+    "unique_targets": 379,
+    "binding_ratio": 0.05080516369443705,
+    "train_size": 21039,
+    "valid_size": 4508,
+    "test_size": 4509
+  },
+  "feature_dim": 2483
+}

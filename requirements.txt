@@ -1,0 +1,21 @@
+# Core ML
+xgboost>=1.7.0
+scikit-learn>=1.2.0
+shap>=0.42.0
+numpy>=1.23.0
+pandas>=1.5.0
+joblib>=1.2.0
+
+# Molecular processing
+rdkit-pypi>=2022.9.1
+
+# Protein features
+biopython>=1.80
+
+# Data source
+PyTDC>=0.4.0
+
+# Web app
+streamlit>=1.28.0
+matplotlib>=3.6.0
+Pillow>=9.0.0

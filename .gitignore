@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data downloads (large files — re-download via train.py)
+data/
+
+# Note: artifacts/ IS committed so Streamlit Cloud can load the model
+# If model is too large for GitHub, use Git LFS
