@@ -4,7 +4,7 @@ shap==0.46.0
 numpy==1.26.4
 pandas==2.2.3
 joblib==1.4.2
-rdkit-pypi==2024.3.5
+rdkit-pypi==2023.9.6
 streamlit==1.40.0
 matplotlib==3.9.3
 Pillow==11.0.0
