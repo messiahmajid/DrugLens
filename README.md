@@ -1,13 +1,3 @@
----
-title: DrugLens
-emoji: 🔬
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_file: app.py
-pinned: false
----
-
 # DrugLens
 
 DrugLens is an interpretable compound screening studio for early-stage kinase drug discovery. It lets a user select a protein target, screen a compound library, rank candidate molecules, inspect trust signals, and export a screening report.
