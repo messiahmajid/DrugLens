@@ -131,22 +131,95 @@ Test coverage:
 
 ## How To Run
 
+### 1. Clone The Repository
+
+```bash
+git clone https://github.com/messiahmajid/DrugLens.git
+cd DrugLens
+```
+
+### 2. Create A Python Environment
+
+Python 3.10 is recommended because the Docker image and dependency set are built around it.
+
+```bash
+python3.10 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+If `python3.10` is not available, Python 3.11 may also work locally, but use Python 3.10 for the most reproducible setup.
+
+### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
+```
+
+The app depends on RDKit, XGBoost, SHAP, Streamlit, pandas, NumPy, scikit-learn, matplotlib, and Pillow.
+
+### 4. Confirm Required Files
+
+The app expects these files to exist:
+
+```text
+artifacts/model.joblib
+artifacts/reference_db.joblib
+artifacts/metrics.json
+data/ligands
+data/proteins
+```
+
+The committed artifacts let the app run immediately. The `data/` files are used for Davis ligand and target libraries.
+
+### 5. Launch The App
+
+```bash
 streamlit run app.py
 ```
 
-To run tests:
+Then open the local Streamlit URL shown in the terminal, usually:
+
+```text
+http://localhost:8501
+```
+
+### 6. Run Tests
 
 ```bash
 python -m pytest tests/ -q
 python -m py_compile app.py src/chemistry.py src/screening.py
 ```
 
-To rebuild model artifacts:
+The test suite covers chemistry utilities, screening behavior, Davis data integrity, and Streamlit UI smoke checks.
+
+### 7. Rebuild Model Artifacts
+
+Only run this if you want to retrain the model from the Davis data:
 
 ```bash
 python train.py
+```
+
+This rebuilds:
+
+```text
+artifacts/model.joblib
+artifacts/reference_db.joblib
+artifacts/metrics.json
+```
+
+### 8. Optional Docker Run
+
+```bash
+docker build -t druglens .
+docker run -p 7860:7860 druglens
+```
+
+Then open:
+
+```text
+http://localhost:7860
 ```
 
 ## How To Use
